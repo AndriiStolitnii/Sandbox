@@ -23,7 +23,7 @@ window.addEventListener('mousemove', function (event) {
         if ((zoom + 1) > maxZoom) {
             console.log('Sorry! It\'s too much');
         } else {
-            zoom++;
+            zoom+2;
     } 
     else {
         direction = 'down';
