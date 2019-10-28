@@ -1,0 +1,22 @@
+.notification {
+--notification-color: #c3c3c3;
+width: 200px;
+height: 50px;
+background-color: var (--notification-color);
+}
+
+.notification.error {
+--notification-color: #red;
+}    
+
+.notification.warning {
+--notification-color: #orange;
+}
+
+.notification.info {
+--notification-color: #1958a0;
+}
+
+.notification.confirm {
+--notification-color: #0ebe1d;
+}
