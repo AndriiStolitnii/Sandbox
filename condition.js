@@ -19,6 +19,9 @@ else if (msg === error){
 }else if (msg === confirm){
     notification.classList.add('confirm');
     notification.innertext = 'confirm'
+}else if (msg === confirm){
+    notification.classList.add('confirm');
+    notification.innertext = 'confirm'
 } else {
     notification.innertext = 'default log'
 }
