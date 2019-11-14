@@ -5,10 +5,10 @@ function sum(a, b) {
     return a + b;
 }   
 
-function logTime(func) {
-    console.time()
-    var res = func(a, b);
-    console.timeEnd()
+function logTime(a, b, fnc) {
+    console.time();
+    var res = fnc(a, b);
+    console.timeEnd();
     return res;
 }
 
@@ -26,3 +26,20 @@ function sum() {
         res += arguments[i];
     }
 }
+
+
+
+function asyncFnc(callback) {
+    return setTimeout(function() {
+        callback('Hello world!');
+    }, 1000);
+}
+
+var resultOfTimeout = '';
+//console.log('Hello!');
+var intervalId = asyncFnc(function(result) {
+    console.log('Hello!');
+    console.log(result);
+    console.log('World!');
+});
+//console.log('World!');
