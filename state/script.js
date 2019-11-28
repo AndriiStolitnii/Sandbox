@@ -1,47 +1,19 @@
-var circle = {
-    el: document.querySelector('.circle'),
-    x: 0,
-    y: 0,
-    move: function (direction, distance) {
-        var transform;
-        switch (direction) {
-            case 'right':
-                transform = 'translate(' + (this.x += distance) + 'px, ' + this.y + 'px)';
-                break;
-            case 'left':
-                transform = 'translate(' + (this.x -= distance) + 'px, ' + this.y + 'px)';
-                break;
-            case 'up':
-                transform = 'translate(' + this.x + 'px, ' + (this.y -= distance) + 'px)';
-                break;
-            case 'down':
-                transform = 'translate(' + this.x + 'px, ' + (this.y += distance) + 'px)';
-                break;
-    
-        }
-        this.el.style.transform = transform;
-    },
-    left: function(distance) {
-        this.move('left', distance);
-    },
-    right: function(distance) {
-        this.move('right', distance);
-    },
-    up: function(distance) {
-        this.move('up', distance);
-    },
-    down: function(distance) {
-        this.move('down', distance);
-    },
-}
+var circleMover = move(document.querySelector('.circle')),
+    squareMover = move(document.querySelector('.square'));
+
+console.log(circleMover, squareMover);
 
 setTimeout(function () {
-    circle.right(100);
-    circle.up(200);
+    circleMover.right(100);
+    squareMover.left(100);
+    circleMover.up(200);
+    squareMover.down(200);
 
     setTimeout(function () {
-        circle.left(350);
-        circle.down(350);
+    circleMover.left(350);
+    squareMover.right(350);
+    circleMover.down(350);
+    squareMover.up(350);
     }, 700)
 
 }, 500)
