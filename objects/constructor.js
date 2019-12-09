@@ -1,11 +1,3 @@
-// function Task(title, description) {
-//     this.title = title;
-//     this.description = description;
-// }
-// var task = new Task('Title', 'Description');
-
-// console.dir(Task);
-
 function MilitaryResource(type, maxHealth, maxDistance) {
     this.type = type;
     this.maxHealth = this.health = maxHealth;
